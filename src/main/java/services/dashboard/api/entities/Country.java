@@ -2,11 +2,16 @@ package services.dashboard.api.entities;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-
-@Entity
 @Data
-public class Country extends BaseEntity{
+public class Country extends BaseEntity {
     private String name;
     private String code;
+
+    public Country() {
+    }
+
+    public Country(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
 }

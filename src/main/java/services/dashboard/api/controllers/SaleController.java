@@ -1,24 +1,35 @@
 package services.dashboard.api.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import services.dashboard.api.entities.Sale;
-import services.dashboard.api.repositories.SaleRepository;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import services.dashboard.api.entities.DaylySaleReport;
+import services.dashboard.api.entities.EmailSubscriptionReport;
 
+import java.time.DayOfWeek;
+import java.time.Month;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-@Controller
+@RestController
 public class SaleController {
-    SaleRepository saleRepository;
 
-    @Autowired
-    public SaleController(
-            SaleRepository saleRepository
-    ) {
-        this.saleRepository = saleRepository;
-    }
+    @RequestMapping(method = RequestMethod.GET, value = "/sales/daily")
+    public List<DaylySaleReport> getDailySales() {
+        List<DaylySaleReport> list = new ArrayList<>();
 
-    public List<Sale> getDaylySales() {
-        return this.saleRepository.findAll();
+        DaylySaleReport report;
+        Random random = new Random();
+        DayOfWeek[] dayOfWeeks = DayOfWeek.values();
+        for(int index = 0; index < dayOfWeeks.length; index++){
+            report = new DaylySaleReport();
+            report.setDay(dayOfWeeks[index]);
+            report.setQuantity(random.nextInt(40));
+            list.add(report);
+        }
+
+        return list;
     }
 }
