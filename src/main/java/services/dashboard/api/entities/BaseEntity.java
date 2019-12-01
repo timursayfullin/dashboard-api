@@ -1,4 +1,4 @@
-package services.dashboardapi.entities;
+package services.dashboard.api.entities;
 
 import lombok.Data;
 

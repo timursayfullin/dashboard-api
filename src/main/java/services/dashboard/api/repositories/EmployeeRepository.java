@@ -1,9 +1,7 @@
-package services.dashboardapi.repositories;
+package services.dashboard.api.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import services.dashboardapi.entities.EmployeeStat;
-
-import java.util.List;
+import services.dashboard.api.entities.EmployeeStat;
 
 public interface EmployeeRepository  extends JpaRepository<EmployeeStat, Long> {
 }

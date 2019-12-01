@@ -1,4 +1,4 @@
-package services.dashboardapi.entities;
+package services.dashboard.api.entities;
 
 public enum TaskStatus {
     NEW,

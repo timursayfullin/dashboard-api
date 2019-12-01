@@ -1,9 +1,9 @@
-package services.dashboardapi.controllers;
+package services.dashboard.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import services.dashboardapi.entities.EmployeeStat;
-import services.dashboardapi.repositories.EmployeeRepository;
+import services.dashboard.api.entities.EmployeeStat;
+import services.dashboard.api.repositories.EmployeeRepository;
 
 import java.util.List;
 

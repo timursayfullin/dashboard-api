@@ -1,9 +1,7 @@
-package services.dashboardapi.repositories;
+package services.dashboard.api.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import services.dashboardapi.entities.Task;
-
-import java.util.List;
+import services.dashboard.api.entities.Task;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 }

@@ -1,9 +1,9 @@
-package services.dashboardapi.controllers;
+package services.dashboard.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import services.dashboardapi.entities.Task;
-import services.dashboardapi.repositories.TaskRepository;
+import services.dashboard.api.entities.Task;
+import services.dashboard.api.repositories.TaskRepository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package services.dashboardapi.entities;
+package services.dashboard.api.entities;
 
 import lombok.Data;
 
@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-public class Sale extends BaseEntity {
+public class Task extends BaseEntity {
     private LocalDateTime datetime;
+    private TaskStatus status;
 }

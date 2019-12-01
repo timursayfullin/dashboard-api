@@ -1,9 +1,9 @@
-package services.dashboardapi.controllers;
+package services.dashboard.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import services.dashboardapi.entities.EmailSubscription;
-import services.dashboardapi.repositories.EmailRepository;
+import services.dashboard.api.entities.EmailSubscription;
+import services.dashboard.api.repositories.EmailRepository;
 
 import java.util.List;
 
